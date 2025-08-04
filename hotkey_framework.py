@@ -9,6 +9,7 @@ import time
 import threading
 from pynput import keyboard
 from pynput.keyboard import Key
+import hotkey_actions  # 导入快捷键动作模块
 
 class HotkeyFramework:
     def __init__(self, debug_mode=False):
@@ -189,8 +190,8 @@ if __name__ == "__main__":
     def sample_action():
         print("🎯 示例功能被触发!")
     
-    # 注册 Ctrl+Alt+S 快捷键
-    framework.register_hotkey([Key.ctrl, Key.alt, 't'], sample_action)
+    # 注册快捷键
+    framework.register_hotkey([Key.ctrl, Key.alt, 't'], hotkey_actions.action1)
     
     try:
         framework.start()
