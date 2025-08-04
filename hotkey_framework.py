@@ -190,8 +190,8 @@ if __name__ == "__main__":
     def sample_action():
         print("🎯 示例功能被触发!")
     
-    # 注册快捷键
-    framework.register_hotkey([Key.ctrl, Key.alt, 't'], hotkey_actions.action1)
+    # 注册快捷键为F11
+    framework.register_hotkey([Key.f10], hotkey_actions.action1)
     
     try:
         framework.start()
